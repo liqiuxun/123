@@ -33,6 +33,7 @@ a {
   font-size: 0.25rem;
   height: .8rem;
   line-height: .8rem;
+  color: #666666;
 }
 .active {
   color: #53c203;

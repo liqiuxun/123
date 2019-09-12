@@ -7,10 +7,12 @@ import lifeAll from "../components/pages/lifeAll.vue"
 import lifeChannel from "../components/pages/lifeChannel.vue";
 import lifeDetails from "../components/pages/lifeDetails.vue";
 import lifeNews from "../components/pages/lifeNews.vue";
-
+import qsDetails from "../components/pages/qsDetails.vue";
+import qsVideoDetails from "../components/pages/qsVideoDetails.vue";
+import qsSearch from "../components/pages/qsSearch.vue";
 export default new Router({
     routes: [{
-            path: "/",
+            path: "/hyFd",
             component: hyFd
         }, {
             path: "/qsLife",
@@ -29,14 +31,25 @@ export default new Router({
                     component: lifeNews
                 },
                 {
-                    path: "/",
+                    path: "",
                     redirect: "lifeAll"
                 }
             ]
         },
         {
+            path: "/qsDetails/:id",
+            component: qsDetails
+        },
+        {
+            path: "/qsVideoDetails",
+            component: qsVideoDetails
+        }, {
+            path: "/qsSearch",
+            component: qsSearch
+        },
+        {
             path: "/",
-            redirect: "/hyFd"
+            redirect: "/qsLife"
         }
     ]
 })
